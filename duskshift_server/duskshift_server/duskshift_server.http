@@ -1,0 +1,6 @@
+@duskshift_server_HostAddress = http://localhost:5051
+
+GET {{duskshift_server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
