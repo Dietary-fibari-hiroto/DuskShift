@@ -1,0 +1,13 @@
+.section-frame {
+  height: 100lvh;
+  width: 100vw;
+}
+
+.img {
+  &__square {
+    &-standard {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+}

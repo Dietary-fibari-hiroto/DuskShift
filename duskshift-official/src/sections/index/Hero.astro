@@ -1,0 +1,70 @@
+---
+import { ImagesRoute } from "../../assets/images/ImagesRoute"
+---
+<section class="section-frame hero-section">
+    <!--四隅の画像 -->
+    <img class="image-bubble tl" src={ImagesRoute.cafe}/>
+    <img class="image-bubble tr" src={ImagesRoute.pexels_myfoodie_2551794}/>
+    <img class="image-bubble bl" src={ImagesRoute.pexels_dariaobymaha_1684151}/>
+    <img class="image-bubble br" src={ImagesRoute.IMG_7188_N9zbY25W}/>
+    <!--羽 -->
+    <figure class="feather-container">
+        <img class="image-feather left" src={ImagesRoute.duskowl_feather}/>
+        <img class="image-feather center" src={ImagesRoute.duskowl_feather}/>
+        <img class="image-feather right" src={ImagesRoute.duskowl_feather}/>
+    </figure>
+
+    <div class="hero-section__title">
+        <img class="img__square-standard" src={ImagesRoute.duskowl_mail}/>
+        <p class="text-5xl">DuskShift</p>
+        <p class="concept-text">見守って、整えて、届けるシフト</p>
+    </div>
+    
+</section>
+
+
+<style lang ="scss">
+    .hero-section{
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+    .feather-container{
+        position:absolute;
+        z-index:5;
+        width:35rem;
+        height:35rem;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .image{
+        &-bubble{
+            position: absolute;
+            width:20rem;
+            height:20rem;
+            border-radius: 50%;
+            &.tl{top:0;left:0;transform: translate(-50%,-50%);}
+            &.tr{top:0;right:0;transform: translate(50%,-50%);}
+            &.bl{bottom:0;left:0;transform: translate(-50%,50%);}
+            &.br{bottom:0;right:0;transform: translate(50%,50%);}
+        }
+        &-feather{
+            position:absolute;
+            width: 4rem;
+            height:4rem;
+            &.left{bottom:0;left:0;transform: translate(0,-200%);}
+            &.center{bottom:0;left:50%;transform: translate(-50%,0);}
+            &.right{bottom:0;right:0;transform: translate(0,-100%);}
+        }
+    }
+
+</style>
