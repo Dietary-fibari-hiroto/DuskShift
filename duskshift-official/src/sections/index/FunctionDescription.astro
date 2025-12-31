@@ -1,0 +1,85 @@
+---
+import { ImagesRoute } from "../../assets/images/ImagesRoute";
+
+const Features=[
+    {title:"フォーマット出力",img:ImagesRoute.logo_excel,text:`集まったシフトは、きれいに整理されたデータとして出力できます。<br/>まずは Excel から。<br/>
+                将来的には、店舗や状況に合わせて<br/>
+                “必要な形”でそのまま使えるように広げていきます。<br/>
+                いつもの表に合わせて整える作業は、もうほとんど必要ありません。`},
+    {title:"シフト募集箱と自動作成",img:ImagesRoute.calendar,text:`「この期間だけ募集したい」「毎月このペースで募集したい」。<br/>
+そんな場面のために、シフト募集箱を作成できます。<br/>
+テンプレートを一度用意しておけば、<br/>
+決まった期間・時間にあわせて、<br/>
+同じ条件の募集を自動で立ち上げることも可能。<br/>
+そのたびにメッセージを送ったり、表を作り直したり。<br/>
+そんな“繰り返しの手間”を静かに減らします。`}
+]
+---
+
+<section class="description">
+    {Features.map((feature,index)=>(
+        <div class="description-container">
+            <img class="description-container__img" src={feature.img}/>
+            <div class="description-container__article">
+                <p class="text-xl">MainFeatures{index+1}</p>
+                <p class="text-5xl">{feature.title}</p>
+                <p set:html={feature.text} class="concept-text description-container__article-main">
+                </p>
+            </div>
+        </div>
+    ))}
+
+    <div class="background-element top" />
+    <div class="background-element bottom" />
+</section>
+
+
+
+<style lang="scss">
+    .description{
+        width:100%;
+        overflow-x:hidden;
+        position:relative;
+        box-sizing: border-box;
+        padding:3rem;
+        &-container{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding:3rem 0;
+            &__img{
+                width:15rem;
+                height:15rem;
+            }
+
+            &__article{
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+                &-main{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+    .background-element{
+        position:absolute;
+        z-index: -1;
+        background-color: var(--color-light-gray);
+        width:100rem;
+        height:30rem;
+        &.top{right:0;top:10%;}
+        &.bottom{left:0;bottom:10%;}
+    }
+
+    @media(max-width:1024px){
+        .description{
+            &-container{
+                flex-direction: column;
+            }
+        }
+
+    }
+
+</style>

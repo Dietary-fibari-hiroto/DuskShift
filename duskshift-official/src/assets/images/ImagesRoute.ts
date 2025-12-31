@@ -10,6 +10,9 @@ import IMG_7038 from "./photos/IMG_7038.jpg";
 import IMG_7188_N9zbY25W from "./photos/IMG_7188.N9zbY25W.jpg";
 import pexels_dariaobymaha_1684151 from "./photos/pexels-dariaobymaha-1684151.jpg";
 import pexels_myfoodie_2551794 from "./photos/pexels-myfoodie-2551794.jpg";
+import arrow_w from "./photos/arrow_w.png";
+import arrow_b from "./photos/arrow_b.png";
+import logo_excel from "./icons/Excel_2013_23480.png";
 
 export const ImagesRoute = {
   cafe: cafe.src,
@@ -24,6 +27,10 @@ export const ImagesRoute = {
   IMG_7188_N9zbY25W: IMG_7188_N9zbY25W.src,
   pexels_dariaobymaha_1684151: pexels_dariaobymaha_1684151.src,
   pexels_myfoodie_2551794: pexels_myfoodie_2551794.src,
+  arrow_w: arrow_w.src,
+  arrow_b: arrow_b.src,
+
+  logo_excel: logo_excel.src,
 };
 
 export type ImageKey = keyof typeof ImagesRoute;

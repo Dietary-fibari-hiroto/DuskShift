@@ -1,0 +1,69 @@
+---
+import { ImagesRoute } from "../../assets/images/ImagesRoute"
+---
+
+<section class="section-frame concept-section">
+    <div class="concept-section__text text-md">
+        シフトのやり取りが、メッセージの中で埋もれていく。<br/>
+        誰かの希望を拾い集めて、間違えないように並べ直す。<br/>
+        <br/>
+        そんな小さな気づかいが積み重なって、 <br/>
+        現場のみんなは、いつも少しだけ忙しくなる。<br/>
+        <br/>
+        このプラットフォームは、集まった声をそっと受け取り、静かに整えて、<br/>
+        必要な形のままあなたの手元へ届けます。<br/>
+        <br/>
+        夜の時間を見守るフクロウのように、 <br/>
+        無理なく、やさしく。 <br/>
+        働く人のリズムに寄り添うシフト募集を、ここから。
+    </div>
+    <img class="concept-section__img" src={ImagesRoute.duskman_working}/>
+    <div class="concept-section__bubble-circle"/>
+    <div class="concept-section__bubble-linecircle"/>
+</section>
+
+<style lang="scss">
+    .concept-section{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-sizing: border-box;
+        padding:1rem;
+        &__text{
+            line-height: 2.5rem;
+        }
+        &__img{
+            width: 30rem;
+            height: 30rem;
+        }
+        &__bubble{
+            &-circle{
+                position: absolute;
+                z-index: -1;
+                left:30%;
+                top:20%;
+                background: var(--color-light-gray);
+                border-radius: 100%;
+                width:15rem;
+                height: 15rem;
+            }
+            &-linecircle{
+                position: absolute;
+                z-index: -1;
+                left:40%;
+                bottom:20%;
+                border: 1rem solid var(--color-light-gray);
+                border-radius: 100%;
+                width: 18rem;
+                height: 18rem;
+            }
+        }
+    }
+
+    @media(max-width:1024px){
+        .concept-section{
+            flex-direction: column;
+        }
+    }
+</style>

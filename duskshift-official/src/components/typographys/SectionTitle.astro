@@ -1,0 +1,21 @@
+---
+const {title,subTitle} = Astro.props;
+---
+
+<div class="section-title">
+    <p class="text-5xl">{title}</p>
+    <p class="text-base">{subTitle}</p>
+</div>
+
+<style lang="scss">
+    .section-title{
+        width:100%;
+        box-sizing: border-box;
+        padding:0 5rem;
+        margin:3rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+</style>

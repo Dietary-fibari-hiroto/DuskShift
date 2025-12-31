@@ -1,4 +1,6 @@
 ---
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
 import "../assets/styles/index.scss"
 
 const {title = "DuskShift"} = Astro.props;
@@ -13,9 +15,11 @@ const {title = "DuskShift"} = Astro.props;
         <title>{title}</title>
     </head>
     <body>
+        <Header/>
         <main>
             <slot/>
         </main>
+        <Footer/>
     </body>
 </html>
 

@@ -1,0 +1,61 @@
+---
+import { ImagesRoute } from "../assets/images/ImagesRoute";
+const logo = ImagesRoute.duskowl;
+
+const navList = [
+    {label:"ホーム",path:"/"},
+    {label:"お知らせ",path:"/"},
+    {label:"機能一覧",path:"/"},
+    {label:"お問い合わせ",path:"/"}
+]
+---
+
+<header class="header">
+    <img class="header-logo" src={logo}/>
+    <nav>
+        <ul class="header-nav">
+            {navList.map((nav)=>(
+                <li class="text-md">
+                    <a href={nav.path}>{nav.label}</a>
+                </li>
+            ))}
+        </ul>
+    </nav>
+</header>
+
+
+
+<style lang="scss">
+    .header{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100vw;
+        z-index:99;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding:1rem 12rem;
+        &-logo{
+            width:6rem;
+            height:6rem;
+        }
+        &-nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            > * + *{
+                margin-left:3rem;
+            }
+        }
+    }
+
+    @media(max-width:1024px){
+        .header{
+            &-nav{
+                display: none;
+            }
+        }
+    }
+</style>

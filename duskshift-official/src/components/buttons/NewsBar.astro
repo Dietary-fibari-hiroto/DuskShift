@@ -1,0 +1,39 @@
+---
+const {title,date,genre,path} = Astro.props;
+---
+
+<button class="news-button">
+    <p class="text-xl">{title}</p>
+    <div class="news-button__inner">
+        <p class="news-button__date text-base">{date}</p>
+        <p class="text-base">{genre}</p>
+    </div>
+</button>
+
+<style lang="scss">
+    .news-button{
+        box-sizing: border-box;
+        padding:1rem 3rem;
+        min-width: 32rem;
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        border-bottom: 1px solid black;
+        text-align: start;
+        &__inner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            > * + *{
+                margin-left:1.5rem;
+            }
+        }
+        &__date{
+            background:var(--color-light-gray);
+            border-radius: 0.5rem;
+            padding:0.3rem 0.5rem;
+        }
+    }
+</style>

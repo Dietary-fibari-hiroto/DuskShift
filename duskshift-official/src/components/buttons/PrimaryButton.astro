@@ -1,0 +1,50 @@
+---
+import { ImagesRoute } from "../../assets/images/ImagesRoute";
+const { isGray = false,label } = Astro.props;
+---
+
+<button class={`button-primary ${isGray&&"gray"}`}>
+    <p class={`button-primary__label text-xl ${isGray&&"gray"}`}>{label}</p>
+    <figure class={`button-primary__arrow ${isGray&&"gray"}`}>
+        {
+            isGray?(<img src={ImagesRoute.arrow_w}/>):(<img src={ImagesRoute.arrow_b}/>)
+        }
+    </figure>
+</button>
+
+<style lang="scss">
+    .button-primary{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding:0 2rem;
+        min-width: 20rem;
+        min-height: 5rem;
+        border-radius: 1rem;
+        border:black solid 1px;
+        &.gray{
+            border:none;
+            background: var(--color-middle-gray);
+        }
+        &__label{
+            color:black;
+            &.gray{
+                color:white;
+            }
+        }
+        &__arrow{
+            width:3.5rem;
+            height: 3.5rem;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border:black solid 1px;
+            border-radius: 100%;
+            &.gray{
+                border:white solid 1px;
+            }
+        }
+
+    }
+</style>

@@ -1,5 +1,6 @@
 ---
 import { ImagesRoute } from "../../assets/images/ImagesRoute"
+import { PrimaryButton } from "../../components/buttons";
 ---
 <section class="section-frame hero-section">
     <!--四隅の画像 -->
@@ -19,7 +20,9 @@ import { ImagesRoute } from "../../assets/images/ImagesRoute"
         <p class="text-5xl">DuskShift</p>
         <p class="concept-text">見守って、整えて、届けるシフト</p>
     </div>
-    
+    <div class="hero-section__nav">
+        <PrimaryButton isGray label="Coming soon..." />
+    </div>
 </section>
 
 
@@ -35,6 +38,11 @@ import { ImagesRoute } from "../../assets/images/ImagesRoute"
             justify-content: center;
             align-items: center;
             flex-direction: column;
+        }
+        &__nav{
+            position:absolute;
+            bottom:10%;
+            right:10%;
         }
     }
     .feather-container{

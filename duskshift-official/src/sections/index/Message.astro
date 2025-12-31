@@ -1,0 +1,46 @@
+---
+import { SectionTitle } from "../../components/typographys";
+import { ImagesRoute } from "../../assets/images/ImagesRoute";
+import { PrimaryButton } from "../../components/buttons";
+---
+
+<section class="message-section">
+    <SectionTitle title="メッセージ" subTitle="Message"/>
+
+<div class="message-section__inner">
+        <img class="img--md-horizontal" src={ImagesRoute.IMG_7038}/>
+    <p class="concept-text">
+        私たちの身の回りには、気づかれないまま放置されている”ちょっとした不便”がまだまだあります。<br/>
+それらを見つけ、静かに取り除いていく。<br/>
+その先に毎日が少しだけ軽くなる未来があると信じています。<br/>
+<br/>
+あなたの声から生まれるアイデアを形にします。<br/>
+ぜひ、感じている不便や「こうなったらいいな」を教えてください。<br/>
+
+by dawn-waiting.com(Hiroto)
+    </p>
+    <div><PrimaryButton label="Comming soon..."/></div>
+</div>
+</section>
+
+<style lang="scss">
+    .message-section{
+        width:100%;
+
+        &__inner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+                    box-sizing: border-box;
+        padding:0 1rem;
+            &-img{
+            }
+
+            > * + *{
+                margin-top: 3rem;
+            }
+        }
+    }
+</style>

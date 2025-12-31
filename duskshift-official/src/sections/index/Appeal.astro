@@ -1,0 +1,33 @@
+---
+import { SectionTitle } from "../../components/typographys";
+import { ImagesRoute } from "../../assets/images/ImagesRoute";
+---
+<section class="appeal-section">
+    <SectionTitle title="DuskShiftが提供する改革" subTitle="The Transformation DuskShift Brings"/>
+    <div class="appeal-section__inner">
+        <img class="appeal-section__inner-img" src={ImagesRoute.desk_img}/>
+        <p class="concept-text">シフト募集の自動化で、あなたの負担をもうひとつ軽くしましょう。</p>
+    </div>
+</section>
+
+<style lang="scss">
+    .appeal-section{
+        &__inner{
+            width: 100%;
+            padding:3rem 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            > * + *{
+                margin-top:1rem;
+            }
+
+            &-img{
+                width:18.75rem;
+                height: 18.75rem;
+            }
+        }
+    }
+</style>

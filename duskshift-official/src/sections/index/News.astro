@@ -1,0 +1,26 @@
+---
+import { SectionTitle } from "../../components/typographys";
+import { NewsBar } from "../../components/buttons";
+import { ImagesRoute } from "../../assets/images/ImagesRoute";
+---
+
+<section class="news-section">
+        <SectionTitle title="お知らせ" subTitle="News"/>
+        <div class="news-section__inner">
+            <NewsBar title="Webアプリ「DuskShift」をリリースしました。" date="2026/01/01" genre="NEWS"/>
+        </div>
+</section>
+
+<style lang="scss">
+    .news-section{
+        &__inner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            > * + *{
+                margin-top:1rem;
+            }
+        }
+    }
+</style>
